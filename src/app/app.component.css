@@ -3,18 +3,12 @@ body {
   height: 100vh;
 }
 
-/* searchbar on the frontpage */
 .searchbar {
   display: flex;
   width: 30%;
   margin-left: auto;
   margin-right: auto;
   flex-direction: row;
-}
-/* searchbar colour upon clicking */
-.searchbar input[type="text"]:focus:not([readonly]) {
-  border: 1px solid #4dd0e1;
-  box-shadow: 0 0 0 1px #4dd0e1;
 }
 
 .frontPageText {

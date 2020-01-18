@@ -22,23 +22,19 @@
     <h1 class="dex-title">MusicDex</h1>
     <img
       class="sidebar-image"
-      src="./img/sidebar-logo.svg"
+      src="../assets/sidebar-logo.svg"
       alt="Illustration of Person Listening to Music"
     />
 
-    <!-- Searchbar on the front page -->
     <div class="searchbar">
-      <label
-        >Search for:
-        <input [(ngModel)]="searchterm" />
-      </label>
       <input
+        [(ngModel)]="searchterm"
         class="form-control"
         type="text"
         placeholder="Search for an artist"
         aria-label="Search"
       />
-      <button (click)="buttonclick()" type="button" class="btn">Search</button>
+      <button (click)="buttonclick()">Search</button>
     </div>
     <br />
     {{ summary }}
