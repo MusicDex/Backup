@@ -120,6 +120,8 @@ body {
 }
 
 .jumbotron {
+  display: flex;
+  flex-direction: row;
   margin-left: 50px;
   margin-right: 50px;
   font-size: 100%;
@@ -137,8 +139,9 @@ body {
   text-align: left;
   font-family: "Linux Libertine", Georgia, Times, serif;
   margin-left: 5px;
+  margin-right: 5px;
   margin-top: 5px;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 .albumCoverArt {
@@ -150,4 +153,5 @@ body {
   width: 75%;
   height: 100%;
   float: right;
+  margin-left: 10px;
 }
