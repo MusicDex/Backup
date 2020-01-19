@@ -19,30 +19,41 @@
     <title>MusicDex</title>
   </head>
   <body>
-    <h1 class="dex-title">MusicDex</h1>
-    <img
-      class="sidebar-image"
-      src="../assets/sidebar-logo.svg"
-      alt="Illustration of Person Listening to Music"
-    />
+    <ng-container *ngIf="onFrontPage; then frontPage; else searchResult">
+    </ng-container>
 
-    <div class="searchbar">
-      <input
-        [(ngModel)]="searchterm"
-        class="form-control"
-        type="text"
-        placeholder="Search for an artist"
-        aria-label="Search"
+    <!-- HTML BEGINS HERE -->
+    <ng-template #frontPage>
+      <h1 class="dex-title">MusicDex</h1>
+      <img
+        class="sidebar-image"
+        src="../assets/sidebar-logo.svg"
+        alt="Illustration of Person Listening to Music"
       />
-      <button (click)="buttonclick()">Search</button>
-    </div>
-    <br />
-    {{ summary }}
-
-    <!-- Text for the front page -->
-    <p class="frontPageText">
-      Please enter the name of the artist you wish to search.
-    </p>
+      <div class="searchbar">
+        <input
+          [(ngModel)]="searchterm"
+          class="form-control"
+          type="text"
+          placeholder="Search for an artist"
+          aria-label="Search"
+        />
+        <button (click)="buttonclick()">Search</button>
+      </div>
+      <br />
+      {{ summary }}
+      <div>
+        <!-- Text for the front page -->
+        <p class="frontPageText">
+          Please enter the name of the artist you wish to search.
+        </p>
+      </div>
+    </ng-template>
+    <ng-template #searchResult>
+      <div>
+        <!-- SEARCH RESULT HTML -->
+      </div>
+    </ng-template>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

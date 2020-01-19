@@ -8,12 +8,12 @@ import { ApiserviceService } from "./apiservice.service";
 })
 export class AppComponent {
   title = "skeleton";
-
   constructor(private apiService: ApiserviceService) {}
-
   searchterm;
   summary;
+  onFrontPage = true;
   buttonclick() {
+    this.onFrontPage = false;
     this.apiService.getSummary(this.searchterm.toLowerCase()).subscribe(
       data => {
         this.summary = data["extract"];
