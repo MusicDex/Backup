@@ -113,7 +113,8 @@ body {
 }
 
 .hideAlbumButton {
-  float: left;
+  border-radius: 50%;
+  border: none;
 }
 
 .albumSquare {

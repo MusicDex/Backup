@@ -60,14 +60,15 @@
             />
             <h1 class="backDexTitle">MusicDex</h1>
             <div class="backSearchbar">
-              <input
-                [(ngModel)]="searchterm"
-                class="form-control"
-                type="text"
-                placeholder="Search for an artist"
-                aria-label="Search"
-              />
-              <button (click)="buttonclick()">Search</button>
+                <input
+                  [(ngModel)]="searchterm"
+                  class="form-control"
+                  type="type"
+                  placeholder="Search for an artist"
+                  aria-label="Search"
+                  id="searchedArtist"
+                />
+                <button (click)="buttonclick()" id="searchButton">Search</button>
             </div>
           </div>
           <div class="main-content">
@@ -80,12 +81,10 @@
               </p>
             </div>
             <div class="albumRow">
-              <button class="hideAlbumButton" (click)="hideAlbums()">
-                Hide
-              </button>
               <h2 class="albumHeading">
                 Albums
               </h2>
+              <button class="hideAlbumButton" (click)="hideAlbums()" id="hideButton" type="button">Hide</button>
             </div>
             <div *ngIf="showAlbums">
               <!-- loop through each album in the list and display them -->
