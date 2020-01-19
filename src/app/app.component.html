@@ -19,25 +19,22 @@
     <title>MusicDex</title>
   </head>
   <body>
-    <div class="sidePage">
-      <div class="sidebar">
-      <img
-          class="sidebar-image"
-          src="../assets/sidebar-logo.svg"
-          alt="Illustration of Person Listening to Music"
-        />
-        <h1 class="dex-title">MusicDex</h1>
-          <div class="searchbar">
-              <input
-                [(ngModel)]="searchterm"
-                class="form-control"
-                type="text"
-                placeholder="Search for an artist"
-                aria-label="Search"
-              />
-              <button (click)="buttonclick()">Search</button>
-          </div>
-      </div>
+    <h1 class="dex-title">MusicDex</h1>
+    <img
+      class="sidebar-image"
+      src="../assets/sidebar-logo.svg"
+      alt="Illustration of Person Listening to Music"
+    />
+
+    <div class="searchbar">
+      <input
+        [(ngModel)]="searchterm"
+        class="form-control"
+        type="text"
+        placeholder="Search for an artist"
+        aria-label="Search"
+      />
+      <button (click)="buttonclick()">Search</button>
     </div>
     <br />
     {{ summary }}
