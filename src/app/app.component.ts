@@ -12,15 +12,26 @@ export class AppComponent {
   searchterm;
   artistName;
   artistBio;
+  albumList;
   onFrontPage = true;
   buttonclick() {
     this.onFrontPage = false;
+    //get the artist's name and bio
     this.apiService.getArtistInfo(this.searchterm.toLowerCase()).subscribe(
       data => {
         this.artistName = data["artist"]["name"];
         let bio: string = data["artist"]["bio"]["summary"];
         //filtering out the href in the bio
         this.artistBio = bio.substring(0, bio.indexOf("<"));
+      },
+      err => {
+        this.artistName = "We could not find any artists for the given search.";
+      }
+    );
+    //get the artist's albums and the cover art for each
+    this.apiService.getAlbums(this.searchterm.toLowerCase()).subscribe(
+      data => {
+        this.albumList = data["topalbums"]["album"];
       },
       err => {
         this.artistName = "We could not find any artists for the given search.";

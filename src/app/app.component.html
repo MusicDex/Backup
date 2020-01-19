@@ -79,6 +79,32 @@
                 {{ artistBio }}
               </p>
             </div>
+            <h2 class="albumHeading">
+              Albums
+            </h2>
+            <!-- loop through each album in the list and display them -->
+            <ng-container *ngFor="let album of albumList">
+              <div class="jumbotron">
+                <img
+                  class="albumCoverArt"
+                  src="{{ album.image[2]['#text'] }}"
+                  alt="Album Cover"
+                />
+                <!-- right side of the artist panel (excluding image & button) -->
+                <div class="jumboSubDiv">
+                  <h2 class="albumTitle">{{ album.name }}</h2>
+                  <p class="albumBio">
+                    test.
+                  </p>
+                  <p>
+                    Blah blah.
+                  </p>
+                  <a class="seeSongs" href="#" role="button">View Tracks</a>
+                </div>
+                <!-- end of subdivision -->
+              </div>
+              <!-- end of the jumbotron -->
+            </ng-container>
           </div>
         </div>
       </div>
