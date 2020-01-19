@@ -47,18 +47,6 @@ export class AppComponent {
       }
     );
   }
-  //get the information for a certain album
-  getAlbumInfo(artistName: string, albumName: string) {
-    this.apiService.getAlbumInfo(artistName, albumName).subscribe(
-      albumData => {
-        this.albumBio = albumData["album"]["wiki"]["summary"];
-        console.log(this.albumBio);
-      },
-      err => {
-        this.albumBio = "We could not find the bio for this album.";
-      }
-    );
-  }
   hideAlbums() {
     this.showAlbums = this.showAlbums ? false : true;
   }

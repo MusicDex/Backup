@@ -26,15 +26,4 @@ export class ApiserviceService {
         "&format=json"
     );
   }
-  public getAlbumInfo(artistName: string, albumName: string) {
-    return this.httpClient.get(
-      "http://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=" +
-        this.APIkey +
-        "&artist=" +
-        artistName +
-        "&album=" +
-        albumName +
-        "&format=json"
-    );
-  }
 }

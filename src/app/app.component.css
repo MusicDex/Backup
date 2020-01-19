@@ -5,6 +5,7 @@ html {
 body {
   background-color: wheat;
   height: 100vh;
+  overflow: scroll;
 }
 
 .searchbar {
@@ -48,6 +49,7 @@ body {
   overflow: hidden;
   background-color: mintcream;
   border-right: 3px solid rgb(173, 153, 212);
+  overflow: scroll;
 }
 
 .backSidebarImage {
