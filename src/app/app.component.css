@@ -2,22 +2,7 @@ body {
   background-color: wheat;
   height: 100vh;
 }
-/*
 
-FOR SIDE BAR
-.sidePage {
-  display: flex;
-  height: 100%;
-}
-
-.sidebar {
-  width: 350px;
-  height: 100%;
-  overflow: hidden;
-
-  border-right: 3px solid rgb(173, 153, 212);
-}
-*/
 .searchbar {
   display: flex;
   width: 40%;
@@ -46,4 +31,39 @@ FOR SIDE BAR
 
 .btn {
   background-color: silver;
+}
+
+.sidePage {
+  display: flex;
+  height: 100%;
+}
+
+.sidebar {
+  width: 350px;
+  height: 100vh;
+  overflow: hidden;
+  background-color: mintcream;
+  border-right: 3px solid rgb(173, 153, 212);
+}
+
+.backSidebarImage {
+  width: 40%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.backDexTitle {
+  text-align: center;
+  font-family: Impact, Navy, sans-serif;
+}
+
+.backSearchbar {
+  display: flex;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: row;
 }
