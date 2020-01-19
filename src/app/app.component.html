@@ -90,6 +90,13 @@
             <div *ngIf="showAlbums">
               <!-- loop through each album in the list and display them -->
               <ng-container *ngFor="let album of albumList">
+                <script>
+                  {
+                    {
+                      getAlbumInfo(artistName, album.name);
+                    }
+                  }
+                </script>
                 <div class="jumbotron">
                   <img
                     class="albumCoverArt"
@@ -99,11 +106,13 @@
                   <!-- right side of the artist panel (excluding image & button) -->
                   <div class="jumboSubDiv">
                     <h2 class="albumTitle">{{ album.name }}</h2>
-                    <p class="albumBio">
-                      test.
+                    <!-- ALBUM DURATION GOES HERE -->
+                    <p class="albumDuration">
+                      Album Duration
                     </p>
-                    <p>
-                      Blah blah.
+                    <!-- ALBUM BIO GOES HERE -->
+                    <p ckass="albumBio">
+                      {{ albumBio }}
                     </p>
                     <a class="seeSongs" href="#" role="button">View Tracks</a>
                   </div>

@@ -10,12 +10,19 @@ export class AppComponent {
   title = "skeleton";
   constructor(private apiService: ApiserviceService) {}
   searchterm;
+  //information about the ARTIST
   artistName;
   artistBio;
+  //information about an ALBUM
   albumList;
+  albumName;
+  albumBio;
+  albumCoverArt;
+  //booleans
   onFrontPage: boolean = true;
   showAlbums: boolean = true;
   buttonclick() {
+    this.artistName = this.searchterm;
     this.onFrontPage = false;
     //get the artist's name and bio
     this.apiService.getArtistInfo(this.searchterm.toLowerCase()).subscribe(
@@ -29,13 +36,26 @@ export class AppComponent {
         this.artistName = "We could not find any artists for the given search.";
       }
     );
-    //get the artist's albums and the cover art for each
+    //get a list of all the artist's albums
     this.apiService.getAlbums(this.searchterm.toLowerCase()).subscribe(
       data => {
         this.albumList = data["topalbums"]["album"];
+        console.log("hello world");
       },
       err => {
         this.artistName = "We could not find any artists for the given search.";
+      }
+    );
+  }
+  //get the information for a certain album
+  getAlbumInfo(artistName: string, albumName: string) {
+    this.apiService.getAlbumInfo(artistName, albumName).subscribe(
+      albumData => {
+        this.albumBio = albumData["album"]["wiki"]["summary"];
+        console.log(this.albumBio);
+      },
+      err => {
+        this.albumBio = "We could not find the bio for this album.";
       }
     );
   }
