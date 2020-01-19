@@ -33,7 +33,7 @@ body {
   background-color: silver;
 }
 
-.sidePage {
+.backPage {
   display: flex;
   height: 100%;
 }
@@ -66,4 +66,31 @@ body {
   margin-left: auto;
   margin-right: auto;
   flex-direction: row;
+}
+
+.main-content {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+.backMainTitle {
+  text-align: left;
+  font-family: "Linux Libertine", Georgia, Times, serif;
+  margin-left: 50px;
+  margin-top: 50px;
+  flex-direction: column;
+}
+
+.artistInfo {
+  margin-left: 50px;
+  margin-right: auto;
+  height: 120px;
+  width: 80%;
+  border:1px solid #ccc;
+  font:16px/26px Georgia, Garamond, Serif;
+  text-align: left;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-color: white;
 }
