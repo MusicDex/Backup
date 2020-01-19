@@ -41,7 +41,6 @@
         <button (click)="buttonclick()">Search</button>
       </div>
       <br />
-      {{ summary }}
       <div>
         <!-- Text for the front page -->
         <p class="frontPageText">
@@ -60,16 +59,17 @@
               alt="Illustration of Person Listening to Music"
             />
             <h1 class="backDexTitle">MusicDex</h1>
-              <div class="backSearchbar">
-                <input
-                  [(ngModel)]="searchterm"
-                  class="form-control"
-                  type="text"
-                  placeholder="Search for an artist"
-                  aria-label="Search"
-                />
-                <button (click)="buttonclick()">Search</button>
-              </div>
+            <div class="backSearchbar">
+              <input
+                [(ngModel)]="searchterm"
+                class="form-control"
+                type="text"
+                placeholder="Search for an artist"
+                aria-label="Search"
+              />
+              <button (click)="buttonclick()">Search</button>
+            </div>
+            THE ARTIST THAT YOU SEARCHED WAS {{ summary }} hi hi
           </div>
         </div>
       </div>
