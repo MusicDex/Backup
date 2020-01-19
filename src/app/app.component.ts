@@ -16,7 +16,7 @@ export class AppComponent {
     this.onFrontPage = false;
     this.apiService.getAlbums(this.searchterm.toLowerCase()).subscribe(
       data => {
-        this.summary = data["topalbums.@attr.artist"];
+        this.summary = data["topalbums"]["@attr"]["artist"];
       },
       err => {
         this.summary = "We could not find any results for the given search";

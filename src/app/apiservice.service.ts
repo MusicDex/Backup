@@ -9,6 +9,7 @@ export class ApiserviceService {
 
   public getAlbums(searchstring: string) {
     searchstring = searchstring.split(" ").join("_");
+    console.log(searchstring);
     return this.httpClient.get(
       "http://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=" +
         searchstring +
