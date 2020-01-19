@@ -100,12 +100,18 @@ body {
   width: 75%;
 }
 
+.albumRow {
+  margin-top: 50px;
+}
+
 .albumHeading {
   text-align: left;
   font-family: "Linux Libertine", Georgia, Times, serif;
-  margin-left: 50px;
-  margin-top: 50px;
-  flex-direction: column;
+  display: inline-block;
+}
+
+.hideAlbumButton {
+  float: left;
 }
 
 .albumSquare {

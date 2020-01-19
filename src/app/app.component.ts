@@ -13,7 +13,8 @@ export class AppComponent {
   artistName;
   artistBio;
   albumList;
-  onFrontPage = true;
+  onFrontPage: boolean = true;
+  showAlbums: boolean = true;
   buttonclick() {
     this.onFrontPage = false;
     //get the artist's name and bio
@@ -37,5 +38,8 @@ export class AppComponent {
         this.artistName = "We could not find any artists for the given search.";
       }
     );
+  }
+  hideAlbums() {
+    this.showAlbums = this.showAlbums ? false : true;
   }
 }
