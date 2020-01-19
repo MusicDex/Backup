@@ -69,17 +69,16 @@
               />
               <button (click)="buttonclick()">Search</button>
             </div>
-            THE ARTIST THAT YOU SEARCHED WAS {{ summary }} hi hi
           </div>
           <div class="main-content">
-              <h1 class="backMainTitle">
-                PLACEHOLDER
-              </h1>
-              <div class="artistInfo">
-                  <p>
-                  <!-- enter Artist info here-->
-                  </p>
-               </div>
+            <h1 class="backMainTitle">
+              {{ artistName }}
+            </h1>
+            <div class="artistInfo">
+              <p>
+                {{ artistBio }}
+              </p>
+            </div>
           </div>
         </div>
       </div>

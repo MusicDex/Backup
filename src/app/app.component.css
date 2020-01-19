@@ -87,8 +87,8 @@ body {
   margin-right: auto;
   height: 120px;
   width: 80%;
-  border:1px solid #ccc;
-  font:16px/26px Georgia, Garamond, Serif;
+  border: 1px solid #ccc;
+  font: 16px/26px Georgia, Garamond, Serif;
   text-align: left;
   overflow-y: scroll;
   overflow-x: hidden;

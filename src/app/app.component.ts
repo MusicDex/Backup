@@ -10,16 +10,20 @@ export class AppComponent {
   title = "skeleton";
   constructor(private apiService: ApiserviceService) {}
   searchterm;
-  summary;
+  artistName;
+  artistBio;
   onFrontPage = true;
   buttonclick() {
     this.onFrontPage = false;
-    this.apiService.getAlbums(this.searchterm.toLowerCase()).subscribe(
+    this.apiService.getArtistInfo(this.searchterm.toLowerCase()).subscribe(
       data => {
-        this.summary = data["topalbums"]["@attr"]["artist"];
+        this.artistName = data["artist"]["name"];
+        let bio: string = data["artist"]["bio"]["summary"];
+        //filtering out the href in the bio
+        this.artistBio = bio.substring(0, bio.indexOf("<"));
       },
       err => {
-        this.summary = "We could not find any results for the given search";
+        this.artistName = "We could not find any artists for the given search.";
       }
     );
   }
